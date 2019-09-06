@@ -1,0 +1,61 @@
+package PiggyBank;
+
+public abstract class AbstractCurrency 
+{
+  private double denomination;
+  private int inventory;
+  private String name;
+  
+  public AbstractCurrency(double denomination, int inventory, String name) 
+  {
+    this.denomination = denomination;
+    this.inventory = inventory;
+    this.name = name;
+  }
+
+  public AbstractCurrency() 
+  {
+    inventory = 1;
+  }
+
+  public void setDenomination(double denomination) 
+  {
+    this.denomination = denomination;
+  }
+
+  public void setInventory(int inventory) 
+  {
+    this.inventory = inventory;
+  }
+
+  public void setName(String name) 
+  {
+    this.name = name;
+  }
+  
+  public double getDenomination() 
+  {
+    return denomination;
+  }
+
+  public int getInventory() 
+  {
+    return inventory;
+  }
+
+  public String getName() 
+  {
+    return name;
+  }
+
+  public double getSum() 
+  {
+    return inventory * denomination;
+  }
+
+  @Override
+  public String toString() 
+  {
+    return inventory + " " + name;
+  }
+}
